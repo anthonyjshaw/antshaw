@@ -1,2 +1,22 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner">
+    <div class="container">
+      <h1>ANTHONY SHAW</h1>
+      <h2>Full stack web developer</h2>
+      <hr>
+    </div>
+
+</div>
+
+
+<div class="container my-4">
+  <p>Web developer</p>
+  <%= link_to "#work" do %>
+    <p>See work <span><i></i></span></p>
+  <% end %>
+  <h2 id='work'>Portfolio</h2>
+  <p><%= link_to 'Tester', 'https://www.startup-testr.me', target: '_blank' %></p>
+  <p><%= link_to 'My Mode','https://my-mode.herokuapp.com', target: '_blank'  %></p>
+  <p><%= link_to 'Whodunnit?', 'https://whodunnit.herokuapp.com', target: '_blank' %></p>
+
+
+</div>

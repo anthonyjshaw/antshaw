@@ -11,3 +11,47 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+
+
+.cont {
+  display: flex;
+  margin: auto;
+  /* justify-content: center; */
+  height: 100%;
+  align-items: center;
+}
+
+ h1 {
+  font-size: 4.2em;
+}
+
+
+.rectangle-red {
+  padding: 30px;
+  background: red;
+  border: red 1px solid;
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+a.active {
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+
+.nav-transparent {
+  display: flex;
+  background: transparent;
+  justify-content: center;
+}

@@ -24,11 +24,12 @@ require("channels")
 
 // External imports
 import "bootstrap";
-
+import { addActiveClassNav } from './add_active_class_nav';
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  addActiveClassNav();
 });
