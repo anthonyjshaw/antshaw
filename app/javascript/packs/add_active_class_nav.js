@@ -1,6 +1,6 @@
 const addActiveClassNav = () => {
   const page = window.location.href;
-  const active = document.getElementById('home-active')
+  const active = document.getElementById('home-active');
   const navLinks = document.querySelectorAll('.nav-link');
 
   navLinks.forEach((element) => {
