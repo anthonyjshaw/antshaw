@@ -25,6 +25,7 @@
 
  h1 {
   font-size: 4.2em;
+  text-align: center;
 }
 
 
@@ -55,3 +56,38 @@ a.active {
   background: transparent;
   justify-content: center;
 }
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+
+
+
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+ }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+ }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  h1 {
+    text-align: left;
+  }
+
+  p {
+    font-size: .95rem;
+  }
+
+ }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+
+ }
