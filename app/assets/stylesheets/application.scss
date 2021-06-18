@@ -13,17 +13,56 @@
 @import "pages/index";
 
 
+.flex-wrapper {
+  display: flex;
+  min-height: 95vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 
+html {
+  scroll-behavior: smooth;
+}
 
-// @keyframes slideInFromLeft {
-//   0% {
-//     transform: translateY(-5%);
-//   }
-//   100% {
-//     transform: translateY(0);
-//   }
-// }
+.middle
+{
+    position: relative;
+}
+a.middle:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+a.middle:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.my-mode {
+  font-family: 'Leckerli One', 'sans-serif';
+}
+
+.whodunnit {
+  font-family: 'Cormorant', 'serif';
+}
+
+.collapse.width {
+    height: auto;
+    width:0;
+    -webkit-transition: width 0.35s ease;
+    -moz-transition: width 0.35s ease;
+    -o-transition: width 0.35s ease;
+    transition: width 0.35s ease;
+}
 
 
 .flx-container {
@@ -31,7 +70,7 @@
   display: flex;
   margin: auto;
   justify-content: center;
-  height: 87vh;
+  height: 100vh;
   align-items: center;
 }
 
@@ -40,16 +79,29 @@
   text-align: center;
 }
 
+h2 {
+  font-size: 3rem;
+}
 
-.rectangle-red {
-  padding: 30px;
-  background: red;
-  border: red 1px solid;
+h3 {
+  font-size: 2rem;
+}
+.header {
+  text-align: left;
+}
+
+.tester{
+
+font-family: 'Source Sans Pro', sans-serif;
+}
+
+.img-show {
+  height: 200px;
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color: #ffc9c9;
 }
 
 a:hover {
@@ -63,12 +115,19 @@ a.active {
 }
 
 
+
 .nav-transparent {
   display: flex;
   background: transparent;
   justify-content: space-evenly;
+  backdrop-filter: blur(5px);
 }
 
+
+
+.border-bottom-black {
+  border-bottom: black 1px solid;
+}
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
@@ -89,15 +148,29 @@ a.active {
 
 // X-Large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-  h1 {
-    text-align: left;
-  }
 
-  p {
-    font-size: .95rem;
-  }
+
+p {
+
+  color: #131313;
+    font-size: 1.0rem;
+    font-weight: 400;
+    line-height: 1.8;
+    margin-bottom: 1.8rem;
 
  }
+
+ .footer-links {
+  display: inline;
+
+}
+.footer-links * {
+    margin-left: 4px;
+  margin-right: 4px;
+
+}
+
+}
 
 // XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: 1400px) {
