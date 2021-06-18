@@ -13,17 +13,36 @@
 @import "pages/index";
 
 
+.flex-wrapper {
+  display: flex;
+  min-height: 95vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
 
 
 
-// @keyframes slideInFromLeft {
-//   0% {
-//     transform: translateY(-5%);
-//   }
-//   100% {
-//     transform: translateY(0);
-//   }
-// }
+.my-mode {
+  font-family: 'Leckerli One', 'sans-serif';
+}
+
+.whodunnit {
+  font-family: 'Cormorant', 'serif';
+}
+
+.collapse.width {
+    height: auto;
+    width:0;
+    -webkit-transition: width 0.35s ease;
+    -moz-transition: width 0.35s ease;
+    -o-transition: width 0.35s ease;
+    transition: width 0.35s ease;
+}
 
 
 .flx-container {
@@ -31,13 +50,29 @@
   display: flex;
   margin: auto;
   justify-content: center;
-  height: 87vh;
+  height: 100vh;
   align-items: center;
 }
 
  h1 {
   font-size: 4.2em;
   text-align: center;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+.header {
+  text-align: left;
+}
+
+.tester{
+
+font-family: 'Source Sans Pro', sans-serif;
 }
 
 
@@ -49,7 +84,7 @@
 
 a {
   text-decoration: none;
-  color: white;
+  color: #ffc9c9;
 }
 
 a:hover {
@@ -67,8 +102,14 @@ a.active {
   display: flex;
   background: transparent;
   justify-content: space-evenly;
+  backdrop-filter: blur(5px);
 }
 
+
+
+.border-bottom-black {
+  border-bottom: black 1px solid;
+}
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
@@ -89,15 +130,19 @@ a.active {
 
 // X-Large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-  h1 {
-    text-align: left;
-  }
 
-  p {
-    font-size: .95rem;
-  }
+
+p {
+
+  color: #2b2b2b;
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.8;
+    margin-bottom: 1.8rem;
 
  }
+
+}
 
 // XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: 1400px) {

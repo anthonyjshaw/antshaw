@@ -29,17 +29,21 @@
   </head>
 
   <body>
-    <div class="container mb-3">
-      <nav class="navbar nav-transparent">
-        <%= link_to "Home", root_path, class:"nav-link active", id:'home-active' %>
-        <%= link_to "About", about_path, class:"nav-link" %>
-        <%= link_to "Portfolio", portfolio_path, class:"nav-link" %>
+      <nav class="navbar nav-transparent fixed-top">
+        <%= link_to "About", '#about', class:"nav-link" %>
+        <%= link_to "Projects", '#projects', class:"nav-link text-center" %>
+        <%= link_to "Socials", '#socials', class:"nav-link" %>
      </nav>
-   </div>
+   <div class="flex-wrapper">
     <%= yield %>
     <footer class="footer">
-      <div class="div">
+      <div class="container">
+
+        <h2 id='socials'>Socials</h2>
+        <p>github: <%= link_to "@speakinginlungs","https://github.com/speakinginlungs", target: '_blank' %></p>
+        <p>twitter: <%= link_to "@anthonyjshaw","https://twitter.com/anthonyjshaw", target: '_blank' %></p>
       </div>
     </footer>
+  </div>
   </body>
 </html>

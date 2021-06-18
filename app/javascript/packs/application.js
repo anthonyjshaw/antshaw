@@ -31,5 +31,6 @@ import { addActiveClassNav } from './add_active_class_nav';
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+
   addActiveClassNav();
 });
