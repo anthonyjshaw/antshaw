@@ -25,6 +25,21 @@ html {
   scroll-behavior: smooth;
 }
 
+.translate {
+  animation: ty 1s ease 1;
+}
+
+
+@keyframes ty {
+    from {
+        transform: translateY(-50%);
+    } 
+    
+    to {
+        transform: translateY(0%);
+    }
+}
+
 .middle
 {
     position: relative;
@@ -66,7 +81,6 @@ a.middle:before {
 
 
 .flx-container {
-  // animation: 1s ease-out 0s 1 slideInFromLeft;
   display: flex;
   margin: auto;
   justify-content: center;
@@ -75,7 +89,7 @@ a.middle:before {
 }
 
  h1 {
-  font-size: 4.2em;
+  font-size: 14em;
   text-align: center;
 }
 
@@ -102,6 +116,7 @@ font-family: 'Source Sans Pro', sans-serif;
 a {
   text-decoration: none;
   color: #fff;
+  transition: color 0.5s ease;
 }
 
 a:hover {
