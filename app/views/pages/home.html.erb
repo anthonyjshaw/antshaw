@@ -3,7 +3,7 @@
   <div class="text-center my-5 mt-5">
     <div class='translate'>
       <h1>Anthony Shaw</h1>
-      <h2>UK based web developer.</h2>
+      <h2>UK based full stack web developer.</h2>
     </div>
   </div>
 </div>
@@ -19,8 +19,14 @@
   <h2 id='projects' class='my-3'>Projects</h2>
   <p>Here's a list of some of my personal projects.</p>
   <h4 class="my-mode header middle"><%= link_to 'my mode', 'https://www.my-mode.cc', target: '_blank', rel:'noopener'%><span></span></h4>
+  <%= link_to "https://www.my-mode.cc" do %>
+  <%= image_tag "my-mode-image.png", class: "project-image" %>
+  <% end %>
   <p>A web based lookbook to store your fashion ideas. <br>Tired of being unable to find the right style? With <span class="my-mode">my mode</span>, you will never again suffer from fashion problems!</p>
   <h4 class='whodunnit header middle'><%= link_to 'Whodunnit?', 'https://www.whodunnitgame.com', target: '_blank', rel:'noopener' %> </h4>
+  <%= link_to "https://www.whodunnitgame.com" do %> 
+  <%= image_tag "whodunnit-image.png", class: "project-image" %>
+  <% end %>
   <p>An interactive mystery game made with React. <br><span class="whodunnit">Whodunnit!</span> Look at the clues, interview the suspects and find the culprit!</p>
   <h4 class='tester header middle'>
     <%= link_to 'http://www.startup-testr.me', target: '_blank', rel:'noopener' do%>
