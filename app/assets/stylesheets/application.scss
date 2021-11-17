@@ -21,6 +21,11 @@
 }
 
 
+.container-page {
+  width: 77vw;
+  margin:auto;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -80,6 +85,7 @@ a.middle:before {
 }
 
 
+
 .flx-container {
   display: flex;
   margin: auto;
@@ -89,7 +95,7 @@ a.middle:before {
 }
 
  h1 {
-  font-size: 14em;
+  font-size: 6em;
   text-align: center;
 }
 
@@ -128,7 +134,9 @@ a.active {
   border-bottom: 1px solid black;
 }
 
-
+.project-section {
+  margin-bottom: 10px;
+}
 
 .nav-transparent {
   display: flex;
@@ -144,10 +152,21 @@ a.active {
 }
 
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
+@media (max-width: 576px) {
 
+  .header {
+    text-align: center;
+  }
 
+  .section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
 
+  .project-image {
+    width: 90%;
+  }
  }
 
 // Medium devices (tablets, 768px and up)

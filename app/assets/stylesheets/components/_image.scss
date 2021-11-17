@@ -1,4 +1,11 @@
 .project-image {
 	width: 50%;
+	border-radius: 16px;
 	height: auto;
+	margin-top: 24px;
+	margin-bottom: 24px;
+}
+
+.project-image:hover {
+	opacity: 0.5;
 }

@@ -8,38 +8,59 @@
   </div>
 </div>
 <div id="about"><br></div>
-<div class="container" >
+<div class="container-page">
   <hr>
+  <div id='about-container' class="section">
   <h2 class="my-3">About</h2>
   <p>Hi, I'm Anthony!</p>
   <p>I've wanted to build websites for a long time, so I joined a bootcamp and started with Ruby on Rails. <br>What makes making websites so enjoyable is the challenge that comes with technology.</p>
   <p>Beyond web design, I also enjoy producing music, making art and hiking.</p>
+  </div>
   <div id="projects"><br></div>
   <hr class='mb-5'>
-  <h2 id='projects' class='my-3'>Projects</h2>
+  <div id="projects-container" class="section">
+  <h2 id='projects-header' class='my-3'>Projects</h2>
   <p>Here's a list of some of my personal projects.</p>
-  <h4 class="my-mode header middle"><%= link_to 'my mode', 'https://www.my-mode.cc', target: '_blank', rel:'noopener'%><span></span></h4>
-  <%= link_to "https://www.my-mode.cc" do %>
-  <%= image_tag "my-mode-image.png", class: "project-image" %>
-  <% end %>
-  <p>A web based lookbook to store your fashion ideas. <br>Tired of being unable to find the right style? With <span class="my-mode">my mode</span>, you will never again suffer from fashion problems!</p>
-  <h4 class='whodunnit header middle'><%= link_to 'Whodunnit?', 'https://www.whodunnitgame.com', target: '_blank', rel:'noopener' %> </h4>
-  <%= link_to "https://www.whodunnitgame.com" do %> 
-  <%= image_tag "whodunnit-image.png", class: "project-image" %>
-  <% end %>
-  <p>An interactive mystery game made with React. <br><span class="whodunnit">Whodunnit!</span> Look at the clues, interview the suspects and find the culprit!</p>
-  <h4 class='tester header middle'>
-    <%= link_to 'http://www.startup-testr.me', target: '_blank', rel:'noopener' do%>
-  <span>
-    TESTER
-  </span>
-  <% end %>
-</h4>
-  <p>A platform to test features for your web applications. <br>Are you you the founder of a startup? Struggling to get proper feedback on your products? Introducing <span class="tester">TESTER</span>, the #1 platform for feedback on your web applications!</p>
+  <div class='project-section'>
+    <h4 class='whodunnit header middle'><%= link_to 'Whodunnit?', 'https://www.whodunnitgame.com', target: '_blank', rel:'noopener' %> </h4>
+    
+    <%= link_to "https://www.whodunnitgame.com", target: '_blank', rel:'noopener'  do %> 
+    <%= image_tag "whodunnit-image.png", class: "project-image" %>
+    <% end %>
+    <p>An interactive mystery game made with React. <br><span class="whodunnit">Whodunnit!</span> Look at the clues, interview the suspects and find the culprit!</p>
+    </div>
+    <div class='project-section'>
+    <h4 class="my-mode header middle"><%= link_to 'my mode', 'https://www.my-mode.cc', target: '_blank', rel:'noopener'%><span></span></h4>
+    
+    <%= link_to "https://www.my-mode.cc", target: '_blank', rel:'noopener' do %>
+      <%= image_tag "my-mode-image.png", class: "project-image" %>
+    <% end %>
+
+    <p>A web based lookbook to store your fashion ideas. <br>Tired of being unable to find the right style? With <span class="my-mode">my mode</span>, you will never again suffer from fashion problems!</p>
+  </div>
+  <div class='project-section'>
+    <h4 class='tester header middle'>
+      <%= link_to 'http://www.startup-testr.me', target: '_blank', rel:'noopener' do%>
+    <span>
+      TESTER
+    </span>
+    <% end %>
+  </h4>
+
+    <%= link_to "http://www.startup-testr.me", target: '_blank', rel:'noopener' do %>
+      <%= image_tag "tester-image.png", class: 'project-image' %>
+    <% end %>
+  
+    <p>A platform to test features for your web applications. <br>Are you you the founder of a startup? Struggling to get proper feedback on your products? Introducing <span class="tester">TESTER</span>, the #1 platform for feedback on your web applications!</p>
+  </div>
 <hr>
+</div>
+
 <div id="contact"><br></div>
-<h2 class="my-3">Contact</h2>
-  <p>Want to get in touch? <%= link_to "Send me an email", "mailto:anthonyshaw@sceaga.com" %> or hit me up on the socials:
+  <div id="contact-container" class="section">
+    <h2 class="my-3">Contact</h2>
+    <p>Want to get in touch? <%= link_to "Send me an email", "mailto:anthonyshaw@sceaga.com" %> or hit me up on the socials:
+  </div>
 </div>
 
 
