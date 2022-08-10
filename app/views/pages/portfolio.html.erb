@@ -1,0 +1,29 @@
+<div class="flx-container">
+  <div class="text-center my-5 mt-5">
+    <div class="translate">
+      <h1 class="home-title">Portfolio</h1>
+    </div>
+  </div>
+</div>
+
+<h2 id='projects-header' class='my-3'>Web</h2>
+  <p>Here's a list of some of my personal projects.</p>
+  <div class='project-section'>
+    <h4 class='whodunnit header middle'><%= link_to 'Whodunnit?', 'https://www.whodunnitgame.com', target: '_blank', rel:'noopener' %> </h4>
+    <%= link_to "https://www.whodunnitgame.com", target: '_blank', rel:'noopener'  do %> 
+    <%= image_tag "whodunnit-image.png", class: "project-image" %>
+    <% end %>
+    <p>An interactive mystery game made with React. <br><span class="whodunnit">Whodunnit!</span> Look at the clues, interview the suspects and find the culprit!</p>
+    </div>
+    <div class='project-section'>
+    <h4 class="my-mode header middle"><%= link_to 'my mode', 'https://www.my-mode.cc', target: '_blank', rel:'noopener'%><span></span></h4>
+    
+    <%= link_to "https://www.my-mode.cc", target: '_blank', rel:'noopener' do %>
+      <%= image_tag "my-mode-image.png", class: "project-image" %>
+    <% end %>
+
+    <p>A web based lookbook to store your fashion ideas. <br>Tired of being unable to find the right style? With <span class="my-mode">my mode</span>, you will never again suffer from fashion problems!</p>
+  </div>
+  
+<hr>
+</div>

@@ -26,9 +26,10 @@
    </head>
    <body>
       <nav class="navbar nav-transparent fixed-top">
-         <%= link_to "About", '#about', class:"nav-link", rel:'noopener' %>
-         <%= link_to "Projects", '#projects', class:"nav-link text-center", rel:'noopener' %>
-         <%= link_to "Contact", '#contact', class:"nav-link", rel:'noopener' %>
+         <%= link_to "Home", '/', class: "nav-link", rel: "noopener" %>
+         <%= link_to "About", 'about', class:"nav-link", rel:'noopener' %>
+         <%= link_to "Portfolio", 'portfolio', class:"nav-link text-center", rel:'noopener' %>
+         <%= link_to "Contact", 'contact', class:"nav-link", rel:'noopener' %>
       </nav>
       <div class="flex-wrapper">
         <%= yield %>
@@ -37,7 +38,7 @@
            <div class="container">
               <div class="footer">
                  <div class="footer-links">
-                    <%= link_to 'https://www.github.com/speakinginlungs', target: '_blank', rel:'noopener', id: "github-footer-link" do %>
+                    <%= link_to 'https://www.github.com/anthonyjshaw', target: '_blank', rel:'noopener', id: "github-footer-link" do %>
                       <i class="fab fa-github"></i>
                     <% end %>
                     <%= link_to 'https://www.instagram.com/antjjshaw', target: '_blank', rel:'noopener', id: "instagram-footer-link" do %>
