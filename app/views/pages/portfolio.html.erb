@@ -2,28 +2,74 @@
   <div class="text-center my-5 mt-5">
     <div class="translate">
       <h1 class="home-title">Portfolio</h1>
+      <p>Below you'll find my work.</p>
+      <p>I do a lot of stuff.</p>
     </div>
   </div>
 </div>
 
-<h2 id='projects-header' class='my-3'>Web</h2>
-  <p>Here's a list of some of my personal projects.</p>
-  <div class='project-section'>
-    <h4 class='whodunnit header middle'><%= link_to 'Whodunnit?', 'https://www.whodunnitgame.com', target: '_blank', rel:'noopener' %> </h4>
-    <%= link_to "https://www.whodunnitgame.com", target: '_blank', rel:'noopener'  do %> 
-    <%= image_tag "whodunnit-image.png", class: "project-image" %>
-    <% end %>
-    <p>An interactive mystery game made with React. <br><span class="whodunnit">Whodunnit!</span> Look at the clues, interview the suspects and find the culprit!</p>
-    </div>
-    <div class='project-section'>
-    <h4 class="my-mode header middle"><%= link_to 'my mode', 'https://www.my-mode.cc', target: '_blank', rel:'noopener'%><span></span></h4>
-    
-    <%= link_to "https://www.my-mode.cc", target: '_blank', rel:'noopener' do %>
-      <%= image_tag "my-mode-image.png", class: "project-image" %>
-    <% end %>
-
-    <p>A web based lookbook to store your fashion ideas. <br>Tired of being unable to find the right style? With <span class="my-mode">my mode</span>, you will never again suffer from fashion problems!</p>
-  </div>
+<div class="container-page">
+<div class='project-header'>
+  <h2 id='projects-header'>Web Copy</h2>
+  <h3>Web writing for the best fighting.</h3>
+  <p>I produce content for websites to improve SEO retention.</p>
+  <p>That's why, with ___, you'll ____.</p>
+</div>
+  <div class="project-grid">
+  <% @websites.each do |website| %>
   
+  
+  <div class="project-section">
+    <h3 class='<%= website[:class_name].downcase %> header middle'>
+      <%= link_to "#{website[:name]}", "#{website[:link]}", target: '_blank', rel: 'noopener'%>
+    </h3>
+    <div class="project-container">
+    <%= link_to "#{website[:link]}", target: '_blank', rel:'noopener' do %> 
+          <%= image_tag website[:image_link], class: "project-image" %>
+    <% end %>
+      <%= sanitize website[:description] %>
+    </div>
+  </div>
+  <% end %>
+  </div>
 <hr>
+
+<div class="project-header">
+  <h2 id='projects-header'>Email Newsletters</h2>
+  <h3>Looking for that sweet audience retention?</h3> 
+  <p>With one of my carefully constructed email newsletters, you'll find customers in no time.</p>
 </div>
+  <% @email_newsletters.each do |newsletter| %>
+  <div class="project-section">
+    <h3 class='header middle'>
+      <%= link_to "#{newsletter[:link]}", "/#", target: '_blank', rel: 'noopener'%>
+    </h3>
+    <div class="project-container">
+    <%= link_to "#{newsletter[:link]}", target: '_blank', rel:'noopener' do %> 
+          
+    <% end %>
+      <%= sanitize newsletter[:description] %>
+    </div>
+  </div>
+  <% end %>
+
+<hr>
+
+<div class='project-header'>
+  <h2 id='projects-header'>Blogs and Articles</h2>
+  <p>I produce blogs and articles on improving your SEO output.</p>
+</div>
+  <% @blogs_and_articles.each do |article| %>
+  <div class="project-section">
+    <h3 class='header middle'>
+      <%= link_to "Test", "/#", target: '_blank', rel: 'noopener'%>
+    </h3>
+    <div class="project-container">
+    <%= link_to "#{article[:link]}", target: '_blank', rel:'noopener' do %> 
+          
+    <% end %>
+      <%= sanitize article[:description] %>
+    </div>
+  </div>
+  <% end %>
+<hr>
