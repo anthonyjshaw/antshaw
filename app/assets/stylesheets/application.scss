@@ -21,6 +21,7 @@
 }
 
 
+
 .container-page {
   width: 77vw;
   margin:auto;
@@ -97,10 +98,14 @@ a.middle:before {
  h1 {
   font-size: 6em;
   text-align: center;
+  margin-bottom: 0.67em;
+  margin-top: 0.67em;
 }
 
 h2 {
   font-size: 3rem;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
 }
 
 h3 {
@@ -132,10 +137,6 @@ a:hover {
 a.active {
   color: black;
   border-bottom: 1px solid black;
-}
-
-.project-section {
-  margin-bottom: 10px;
 }
 
 .nav-transparent {
@@ -175,8 +176,14 @@ a.active {
  }
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-
+@media (max-width: 992px) {
+  .arrow-box {
+    top: 18vh;
+    right: 2vh;
+    svg {
+      width: 10px;
+    }
+  }
  }
 
 // X-Large devices (large desktops, 1200px and up)
@@ -207,5 +214,22 @@ p {
 
 // XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: 1400px) {
+  .arrow-box {
+    top: 50vh;
+    right: 24vh;
+    height: 40px;
+  }
+}
+  
+  
 
- }
+ .arrow-box {
+  position: fixed;
+  cursor: pointer;
+  transition: transform 0.1s ease-in  ;
+}
+
+.arrow-box:hover {
+  transform: translateY(20%);
+}
+

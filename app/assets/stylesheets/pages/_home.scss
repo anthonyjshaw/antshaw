@@ -1,1 +1,48 @@
 // Specific CSS for your home-page
+.logo {
+	height: 24px;
+	width: 24px;
+}
+
+.circle-logo {
+	height: 100px;
+	width: 100px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	background-color: #e3a446;
+	border-radius: 50%;
+	transition: transform 0.1s;
+}
+
+.circle-logo:hover {
+	cursor: pointer;
+	transform: scale(1.2);
+}
+
+.circle-container {
+	display: flex;
+    margin: auto;
+	width: 50vw;
+	justify-content: space-around;
+}
+
+.header-text {
+	p {
+		margin-top: 1em;
+		margin-bottom: 1em;
+		font-size: 1em;
+	}
+}
+
+@media (max-width:390px) {
+	h1.home-title {
+		font-size: 4em;
+	}
+	.circle-container {
+		width: 100vw;
+	}
+	.arrow-box {
+		top: 300px;
+	}
+}
