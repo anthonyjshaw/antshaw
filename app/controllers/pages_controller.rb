@@ -17,13 +17,6 @@ class PagesController < ApplicationController
       link: 'https://www.my-mode.art',
       image_link: 'my-mode-image.png',
       description: '<p> I wrote UX copy for a web based lookbook app <span class="my-mode">my mode</span>.</p>'
-    },
-
-    {
-      name: 'joos',
-      class_name: 'joos',
-      link: 'https://example.com',
-
     }
     
     ]

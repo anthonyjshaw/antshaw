@@ -2,23 +2,40 @@
   <div class="text-center my-5 mt-5">
     <div class="translate">
       <h1 class="home-title">Portfolio</h1>
-      <p>Below you'll find my work.</p>
-      <p>I do a lot of stuff.</p>
+      <p>Ad copy, landing pages, newsletters and more.</p>
     </div>
   </div>
 </div>
-
 <div class="container-page">
+<hr>
+
+<div class="project-header">
+  <h2 id='projects-header'>Ad Copy</h2>
+  <h3>Ads make the world go round.</h3> 
+  <p>With one of my carefully constructed email newsletters, you'll find customers in no time.</p>
+</div>
+  <% @email_newsletters.each do |newsletter| %>
+  <div class="project-section">
+    <h3 class='header middle'>
+      <%= link_to "#{newsletter[:link]}", "/#", target: '_blank', rel: 'noopener'%>
+    </h3>
+    <div class="project-container">
+    <%= link_to "#{newsletter[:link]}", target: '_blank', rel:'noopener' do %> 
+          
+    <% end %>
+      <%= sanitize newsletter[:description] %>
+    </div>
+  </div>
+  <% end %>
+
+<hr>
 <div class='project-header'>
-  <h2 id='projects-header'>Web Copy</h2>
-  <h3>Web writing for the best fighting.</h3>
-  <p>I produce content for websites to improve SEO retention.</p>
-  <p>That's why, with ___, you'll ____.</p>
+  <h2 id='projects-header'>Web</h2>
+  <h3>Landing pages.</h3>
+  <p>I produce content for websites that maximises sales and improves SEO rankings.</p>
 </div>
   <div class="project-grid">
   <% @websites.each do |website| %>
-  
-  
   <div class="project-section">
     <h3 class='<%= website[:class_name].downcase %> header middle'>
       <%= link_to "#{website[:name]}", "#{website[:link]}", target: '_blank', rel: 'noopener'%>
