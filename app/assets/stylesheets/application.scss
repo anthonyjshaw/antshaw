@@ -31,9 +31,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.translate {
-  animation: ty 1s ease 1;
-}
 
 
 @keyframes ty {
@@ -46,6 +43,20 @@ html {
     }
 }
 
+@keyframes ty-mobile {
+  from {
+    transform: translateY(-10%);
+} 
+
+to {
+    transform: translateY(0%);
+}
+}
+
+.translate-mobile {
+  // animation: name duration timing-function delay iteration-count direction fill-mode;
+  animation: ty-mobile 0.5s ease 0.1s;
+}
 .middle
 {
     position: relative;
@@ -154,7 +165,7 @@ a.active {
 
 // Small devices (landscape phones, 576px and up)
 @media (max-width: 576px) {
-
+  
   .header {
     text-align: center;
   }
@@ -188,7 +199,10 @@ a.active {
 
 // X-Large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-
+  .translate {
+    animation: ty 1s ease 1;
+  }
+  
 
 p {
 

@@ -23,6 +23,10 @@
 	a {
 		width: 50%;
 		height: auto;
+		img {
+			transition: transform 0.5s;
+		}
+
 		img:hover {
 			transform: scale(1.2);
 		}

@@ -23,7 +23,7 @@
 .circle-container {
 	display: flex;
     margin: auto;
-	width: 50vw;
+	width: 55vw;
 	justify-content: space-around;
 }
 
@@ -41,6 +41,11 @@
 	}
 	.circle-container {
 		width: 100vw;
+	}
+
+	.circle-logo {
+		height: 75px;
+		width: 75px;
 	}
 	.arrow-box {
 		top: 300px;
