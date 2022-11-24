@@ -1,0 +1,37 @@
+.about-h2 {
+	font-size: 2em;
+	text-align: center;
+}
+
+.about-section {
+	display: flex;
+	justify-content: space-around;
+	div {
+		width: 50%;
+	}
+}
+
+@media (max-width: 400px) {
+	.about-section {
+		flex-direction: column;
+		margin-bottom: 48px;
+		margin-top: 48px;
+		div {
+			img {
+				height: 100px;
+			}
+		}
+	}
+}
+
+@media (min-width:720px) {
+	.about-section {
+		margin-bottom: 48px;
+		margin-top: 48px;
+		div {
+			img {
+				height: 100px;
+			}
+		}
+	}
+}

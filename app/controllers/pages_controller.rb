@@ -13,22 +13,18 @@ class PagesController < ApplicationController
 
   @ad_copy = [
     {
-      name: 'test 1',
+      name: 'Martins mocha ad.',
       class_name: 'ad-copy-1',
-      description: '<p>Ad for blah blah blah</p>',
-      link: '',
+      description: "<p>Ad for Martin's coffee.</p>",
+      alt: "Image of Martin's coffee Instagram post.",
+      image_link: 'martins-ad.png',
     },
     {
-      name: 'test 2',
-      class_name: '',
-      description: '',
-      link: '',
-    },
-    {
-      name: 'test 3',
-      class_name: '',
-      description: '',
-      link: '',
+      name: "Clearcut CRM ad.",
+      class_name: "ad-copy-1",
+      description: "<p>Facebook post for productivity software.</p>",
+      alt: "Image of Clearcut Facebook post.",
+      image_link: "clearcut-ad.png"
     }
   ]
   @websites = [
@@ -37,7 +33,16 @@ class PagesController < ApplicationController
       class_name: 'my-mode',
       link: 'https://www.my-mode.art',
       image_link: 'my-mode-image.png',
+      alt: "Image of My Mode landing page.",
       description: '<p>Landing page copy for fashion social media site <span class="my-mode">my mode</span>.</p>'
+    },
+    {
+      name: "joos",
+      class_name: "joos",
+      link: "https://www.joos.agency",
+      image_link: 'joos.png',
+      alt: "Image of joos about page",
+      description: '<p>Created About page for creative agency <span class="joos">joos</span>.'
     }
     
     ]
@@ -46,21 +51,21 @@ class PagesController < ApplicationController
       {
         name: 'test',
         class_name: 'test',
-        description: 'test',
+        description: '<p>test</p>',
         image_link: 'email-newsletter1.png',
       },
       {
         name: 'test2',
         class_name: 'test2',
-        description: '',
+        description: '<p>test2</p>',
         image_link: 'email-newsletter2.png',
       },
-      # {
-      #   name: 'test3',
-      #   class_name: 'test3',
-      #   description: '',
-      #   link: '',
-      # }
+      {
+        name: 'test3',
+        class_name: 'test3',
+        description: '<p>test3</p>',
+        image_link: 'email-newsletter3.png',
+      }
     ]
 
     @blogs_and_articles = [

@@ -1,9 +1,28 @@
 
 @media(max-width: 390px) {
 	.project-container {
+		text-align: center;
+
 		flex-direction: column;
+		align-items: center;
+		a {
+			text-align: center;
+		}
+
+		div {
+			text-align: center;
+		}
+	}
+
+	.image-container {
+		text-align: center;
+	}
+	.newsletter-image {
+		height: 390px;
+		width: 275.39px;
 	}
 }
+
 
 .project-header {
 	text-align: center;
@@ -15,21 +34,69 @@
 
 .project-container {
 	display: flex;
-	flex-direction: column;
 	p {
 	  margin-bottom: 1em;
 	  margin-top: 1em;
 	}
 	a {
-		width: 50%;
 		height: auto;
-		img {
-			transition: transform 0.5s;
-		}
-
-		img:hover {
-			transform: scale(1.2);
-		}
+		
 	}
 }
 
+@media (min-width: 720px) {
+	.project-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+  		gap: 10px;
+ 		grid-auto-rows: minmax(100px, auto);
+	}
+
+	.project-image {
+		transition: transform 0.5s;
+	}
+	.project-image:hover {
+		cursor: pointer;
+		transform: scale(1.5);
+	}
+
+	.project-section {
+		display: flex;
+		flex-direction: column;
+		.image-container {
+			display: flex;
+    		align-items: center;
+			height: 100%;
+		}
+	}
+	.project-container {
+		flex-direction: row;
+
+		a {
+			img {
+				transition: transform 0.5s;
+			}
+	
+			img:hover {
+				transform: scale(1.2);
+			}
+		}
+	}
+	.newsletter-image {
+		height: auto;
+		width: 100%;
+	}
+	.newsletter-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+  		gap: 10px;
+ 		grid-auto-rows: minmax(100px, auto);
+		div {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	.newsletter {
+		width: 33%;
+	}
+}

@@ -1,11 +1,23 @@
 .project-image {
-	width: 50%;
-	border-radius: 16px;
 	height: auto;
 	margin-top: 24px;
 	margin-bottom: 24px;
 }
 
-.project-image:hover {
-	opacity: 0.5;
+// .project-image:hover {
+// 	opacity: 0.5;
+// }
+
+@media (min-width: 720px) {
+	.project-image {
+		width: 200px;
+		height: auto;
+	}
+}
+
+@media (max-width: 400px) {
+	.project-image {
+		width: 100px;
+		height: auto;
+	}
 }

@@ -38,27 +38,28 @@ html {
 
 @keyframes ty {
     from {
-        transform: translateY(-25%);
+        opacity: 0;
     } 
     
     to {
-        transform: translateY(0%);
+        opacity: 1;
     }
 }
 
 @keyframes ty-mobile {
   from {
-    transform: translateY(-10%);
+    opacity: 0;
 } 
 
 to {
-    transform: translateY(0%);
+    opacity: 1;;
 }
 }
 
 .translate-mobile {
   // animation: name duration timing-function delay iteration-count direction fill-mode;
   animation: ty-mobile 0.5s ease 0.1s;
+  // transition: ;
 }
 .middle
 {
@@ -192,8 +193,7 @@ a.active {
 // Large devices (desktops, 992px and up)
 @media (max-width: 992px) {
   .arrow-box {
-    top: 18vh;
-    right: 2vh;
+    
     svg {
       width: 10px;
     }
@@ -207,15 +207,7 @@ a.active {
   }
   
 
-p {
 
-  color: #131313;
-    font-size: 1.0rem;
-    font-weight: 400;
-    line-height: 1.8;
-    margin-bottom: 1.8rem;
-
- }
 
  .footer-links {
   display: inline;
@@ -232,8 +224,6 @@ p {
 // XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: 1400px) {
   .arrow-box {
-    top: 50vh;
-    right: 24vh;
     height: 40px;
   }
 }
@@ -241,7 +231,6 @@ p {
   
 
  .arrow-box {
-  position: fixed;
   cursor: pointer;
   transition: transform 0.1s ease-in  ;
 }
@@ -249,4 +238,16 @@ p {
 .arrow-box:hover {
   transform: translateY(20%);
 }
+@media (max-width:400px) {
+  p {
+    font-size: 18px;
+  }
+}
+p {
 
+  color: #131313;
+    font-weight: 400;
+    line-height: 1.8;
+    margin-bottom: 1.8rem;
+
+ }
