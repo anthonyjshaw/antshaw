@@ -12,12 +12,11 @@
     align-items: center;
 	background-color: #e3a446;
 	border-radius: 50%;
-	transition: transform 0.1s;
 }
 
 .circle-logo:hover {
 	cursor: pointer;
-	transform: scale(1.2);
+	
 }
 
 .circle-container {
@@ -25,6 +24,12 @@
     margin: auto;
 	width: 55vw;
 	justify-content: space-around;
+	a {
+		transition: transform 0.1s;
+	}
+	a:hover {
+		transform: scale(1.2);
+	}
 }
 
 .header-text {

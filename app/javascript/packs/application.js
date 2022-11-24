@@ -27,7 +27,7 @@ import "bootstrap";
 import { addActiveClassNav } from './add_active_class_nav';
 import scrollToPage from './scroll_to_page';
 import {addPadding} from './addPadding';
-
+import getModal from "./modal";
 import { changeToMobileNumber } from "./change_to_mobile_number";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -38,5 +38,6 @@ document.addEventListener('turbolinks:load', () => {
   addActiveClassNav();
   scrollToPage();
   changeToMobileNumber()
+  getModal()
   addPadding('/portfolio', '.container-page');
 });

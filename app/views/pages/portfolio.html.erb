@@ -12,7 +12,7 @@
 <div class="project-header">
   <h2 id='projects-header'>Ad Copy</h2>
   <h3>Ads make the world go round.</h3> 
-  <p>With one of my carefully constructed email newsletters, you'll find customers in no time.</p>
+  <p>I have written advertisements below.</p>
 </div>
   <% @email_newsletters.each do |newsletter| %>
   <div class="project-section">
@@ -21,7 +21,6 @@
     </h3>
     <div class="project-container">
     <%= link_to "#{newsletter[:link]}", target: '_blank', rel:'noopener' do %> 
-          
     <% end %>
       <%= sanitize newsletter[:description] %>
     </div>
@@ -56,28 +55,19 @@
   <h3>Looking for that sweet audience retention?</h3> 
   <p>With one of my carefully constructed email newsletters, you'll find customers in no time.</p>
 </div>
-  <% @email_newsletters.each do |newsletter| %>
-  <div class="project-section">
-    <h3 class='header middle'>
-      <%= link_to "#{newsletter[:link]}", "/#", target: '_blank', rel: 'noopener'%>
-    </h3>
-    <div class="project-container">
-    <%= link_to "#{newsletter[:link]}", target: '_blank', rel:'noopener' do %> 
-          
+  <div style="display:flex;">
+    <% @email_newsletters.each do |newsletter| %>
+      <div style="width:33%;height:400px;background:white;margin:auto;" data-image-link=<%="/assets/#{newsletter[:image_link]}"%> class="test-block"><%= image_tag newsletter[:image_link], style: "width:100%;height:100%", alt:"image"%></div>
     <% end %>
-      <%= sanitize newsletter[:description] %>
-    </div>
   </div>
-  <% end %>
-
 <hr>
-
 <div class='project-header'>
   <h2 id='projects-header'>Blogs and Articles</h2>
   <p>I produce blogs and articles on improving your SEO output.</p>
 </div>
   <% @blogs_and_articles.each do |article| %>
   <div class="project-section">
+
     <h3 class='header middle'>
       <%= link_to "Test", "/#", target: '_blank', rel: 'noopener'%>
     </h3>

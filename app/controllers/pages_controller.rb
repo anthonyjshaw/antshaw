@@ -44,17 +44,29 @@ class PagesController < ApplicationController
 
     @email_newsletters = [
       {
-        name: '',
-        class_name: '',
+        name: 'test',
+        class_name: 'test',
+        description: 'test',
+        image_link: 'email-newsletter1.png',
+      },
+      {
+        name: 'test2',
+        class_name: 'test2',
         description: '',
-        link: '',
-      }
+        image_link: 'email-newsletter2.png',
+      },
+      # {
+      #   name: 'test3',
+      #   class_name: 'test3',
+      #   description: '',
+      #   link: '',
+      # }
     ]
 
     @blogs_and_articles = [
       {
-        name: '',
-        class_name: '',
+        name: 'Marketing Trends for 2023',
+        class_name: 'blog',
         description: '',
         link: '',
       }

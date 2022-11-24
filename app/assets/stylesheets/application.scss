@@ -31,11 +31,14 @@ html {
   scroll-behavior: smooth;
 }
 
-
+.width-90 {
+  margin: auto;
+  width: 90%;
+}
 
 @keyframes ty {
     from {
-        transform: translateY(-50%);
+        transform: translateY(-25%);
     } 
     
     to {
