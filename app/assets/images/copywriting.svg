@@ -1,0 +1,25 @@
+<svg width="219" height="162" viewBox="0 0 219 162" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="path-1-inside-1_223_31" fill="white">
+<rect x="17" y="47" width="189" height="93" rx="2"/>
+</mask>
+<rect x="17" y="47" width="189" height="93" rx="2" stroke="black" stroke-width="6" mask="url(#path-1-inside-1_223_31)"/>
+<rect x="3.5" y="3.5" width="212" height="155" rx="4.5" stroke="black" stroke-width="7"/>
+<path d="M22 20.5C22 22.9052 19.8451 25 17 25C14.1549 25 12 22.9052 12 20.5C12 18.0948 14.1549 16 17 16C19.8451 16 22 18.0948 22 20.5Z" stroke="black" stroke-width="2"/>
+<path d="M42 20.5C42 22.9052 39.8451 25 37 25C34.1549 25 32 22.9052 32 20.5C32 18.0948 34.1549 16 37 16C39.8451 16 42 18.0948 42 20.5Z" stroke="black" stroke-width="2"/>
+<path d="M62 20.5C62 22.9052 59.8451 25 57 25C54.1549 25 52 22.9052 52 20.5C52 18.0948 54.1549 16 57 16C59.8451 16 62 18.0948 62 20.5Z" stroke="black" stroke-width="2"/>
+<line x1="6" y1="36" x2="212" y2="36" stroke="black" stroke-width="4"/>
+<line x1="25" y1="122.5" x2="93" y2="122.5" stroke="black"/>
+<line x1="71" y1="58.5" x2="137" y2="58.5" stroke="black"/>
+<line x1="71" y1="67.5" x2="123" y2="67.5" stroke="black"/>
+<line x1="71" y1="77.5" x2="107" y2="77.5" stroke="black"/>
+<line x1="25" y1="94.5" x2="93" y2="94.5" stroke="black"/>
+<line x1="25" y1="102.5" x2="93" y2="102.5" stroke="black"/>
+<line x1="25" y1="112.5" x2="93" y2="112.5" stroke="black"/>
+<rect x="140.165" y="63.4695" width="8.48276" height="25.3826" transform="rotate(50.4076 140.165 63.4695)" stroke="black"/>
+<path d="M124.848 86.7647L116.355 88.666L119.816 80.6806L124.848 86.7647Z" stroke="black"/>
+<path d="M145.605 62.2149L147.824 64.8987C148.704 65.9627 148.555 67.5386 147.491 68.4185L146.617 69.1418L141.211 62.605L142.085 61.8817C143.149 61.0018 144.725 61.151 145.605 62.2149Z" stroke="black"/>
+<mask id="path-17-inside-2_223_31" fill="white">
+<rect x="25" y="54" width="32" height="29" rx="1"/>
+</mask>
+<rect x="25" y="54" width="32" height="29" rx="1" stroke="black" stroke-width="4" mask="url(#path-17-inside-2_223_31)"/>
+</svg>

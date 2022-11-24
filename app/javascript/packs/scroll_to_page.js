@@ -6,7 +6,6 @@ const scrollToPage = () => {
 				arrowBox.style.transform = 'rotate(180deg)'
 				window.scrollBy(0,-document.body.scrollHeight);
 			} else {
-				arrowBox.style.transform = 'none';
 				window.scrollBy(0,window.innerHeight - 100);
 			}
 		});

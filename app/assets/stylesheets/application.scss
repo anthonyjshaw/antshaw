@@ -56,11 +56,6 @@ to {
 }
 }
 
-.translate-mobile {
-  // animation: name duration timing-function delay iteration-count direction fill-mode;
-  animation: ty-mobile 0.5s ease 0.1s;
-  // transition: ;
-}
 .middle
 {
     position: relative;
@@ -87,9 +82,9 @@ a.middle:before {
   font-family: 'Leckerli One', sans-serif;
 }
 
-.whodunnit {
-  font-family: 'Reenie Beanie', cursive;
-}
+// .whodunnit {
+//   font-family: 'Reenie Beanie', cursive;
+// }
 
 .collapse.width {
     height: auto;
@@ -203,7 +198,7 @@ a.active {
 // X-Large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .translate {
-    animation: ty 1s ease 1;
+    animation: ty 2s;
   }
   
 
@@ -231,6 +226,8 @@ a.active {
   
 
  .arrow-box {
+  display: flex;
+  justify-content: center;
   cursor: pointer;
   transition: transform 0.1s ease-in  ;
 }
@@ -239,6 +236,10 @@ a.active {
   transform: translateY(20%);
 }
 @media (max-width:400px) {
+  .translate {
+    animation: ty 2s;
+  }
+  
   p {
     font-size: 18px;
   }

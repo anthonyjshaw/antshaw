@@ -1,8 +1,8 @@
 <div class="flx-container">
   <div class="text-center my-5 mt-5">
-    <div class="translate translate-mobile width-90">
+    <div class="translate">
       <h1 class="home-title">Portfolio</h1>
-      <div id="arrow-box" class= "arrow-box">
+      <div id="arrow-box" class="arrow-box">
         <%= image_tag 'arrow.svg' %>
       </div>
     </div>
@@ -12,13 +12,11 @@
 <hr>
 
 <div class="project-header">
-  <h2 id='projects-header'>Ad Copy</h2>
-  <h3>Ads make the world go round.</h3> 
+  <h2 id='projects-header'>Ads</h2>
   <p>Brands need words that pop.</p>
-  <p>Check out some examples of ad copy below.</p>
+  <p>Check out some examples of my ad copy below.</p>
 </div>
 <div class="project-grid">
-
   <% @ad_copy.each do |ad| %>
   <div class="project-section">
     <h3 class='header middle'>
@@ -35,9 +33,10 @@
 <hr>
 <div class='project-header'>
   <h2 id='projects-header'>Web</h2>
-  <h3>Make a great first impression.</h3>
-  <p>Whether it's a landing page. I can help you improve engagement and SEO ranking by building.</p>
-  <p>Check out some of my examples below.</p>
+  <p>All modern businesses value a well-written webpage.</p>
+  <p>Whether it's a landing page, sales page or information page, you'll want your words to shine through.</p> 
+  <p>I can help you improve engagement and SEO ranking by building.</p>
+  <p>Click the pics to see for yourself.</p>
 </div>
   <div class="project-grid">
   <% @websites.each do |website| %>
@@ -60,7 +59,7 @@
 
 <div class="project-header">
   <h2 id='projects-header'>Email Newsletters</h2>
-  <h3>Looking for that sweet audience retention?</h3> 
+  <p>Keeping customers can be complicated without clear direction.</p>
   <p>With one of my carefully constructed email newsletters, you'll find customers in no time.</p>
 </div>
   <div class="newsletter-grid">

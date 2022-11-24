@@ -6,9 +6,6 @@
 .about-section {
 	display: flex;
 	justify-content: space-around;
-	div {
-		width: 50%;
-	}
 }
 
 @media (max-width: 400px) {
@@ -16,7 +13,10 @@
 		flex-direction: column;
 		margin-bottom: 48px;
 		margin-top: 48px;
+		align-items: center;
+		text-align: center;
 		div {
+			margin: 16px 0;
 			img {
 				height: 100px;
 			}
@@ -24,11 +24,24 @@
 	}
 }
 
+
 @media (min-width:720px) {
+	
+	.flex-end {
+		justify-content: flex-end;
+	}
+	
+	.flex-start {
+		justify-content: flex-start;
+	}
 	.about-section {
 		margin-bottom: 48px;
 		margin-top: 48px;
 		div {
+			width: 50%;
+			justify-content: center;
+			flex-direction: column;
+			display: flex;
 			img {
 				height: 100px;
 			}

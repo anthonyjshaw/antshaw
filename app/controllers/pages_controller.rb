@@ -13,17 +13,17 @@ class PagesController < ApplicationController
 
   @ad_copy = [
     {
-      name: 'Martins mocha ad.',
+      name: "Martin's Mocha",
       class_name: 'ad-copy-1',
-      description: "<p>Ad for Martin's coffee.</p>",
+      description: "<p>Instgram post for Martin's coffee.</p>",
       alt: "Image of Martin's coffee Instagram post.",
       image_link: 'martins-ad.png',
     },
     {
-      name: "Clearcut CRM ad.",
+      name: "Clearcut CRM",
       class_name: "ad-copy-1",
-      description: "<p>Facebook post for productivity software.</p>",
-      alt: "Image of Clearcut Facebook post.",
+      description: "<p>Billboard for productivity software.</p>",
+      alt: "Image of Clearcut poster.",
       image_link: "clearcut-ad.png"
     }
   ]
