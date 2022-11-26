@@ -3,7 +3,7 @@
     <div class="translate">
       <h1 class="home-title">Portfolio</h1>
       <div id="arrow-box" class="arrow-box">
-        <%= image_tag 'arrow.svg' %>
+        <%= image_tag 'arrow.svg', alt: "Graphic of directional arrow box.", aria_label: "Click to see the portfolio"%>
       </div>
     </div>
   </div>
@@ -16,80 +16,30 @@
   <p>Brands need words that pop.</p>
   <p>Check out some examples of my ad copy below.</p>
 </div>
-<div class="project-grid">
-  <% @ad_copy.each do |ad| %>
+<div id="portfolio-examples" class="portfolio-examples">
+  <% @examples.each do |ad| %>
   <div class="project-section">
     <h3 class='header middle'>
       <%= ad[:name] %>
     </h3>
+    <div class="project-example"> 
     <div class="image-container">
-      <%= image_tag ad[:image_link], class: 'project-image', alt: ad[:alt] %>
-    </div>
-     <%= sanitize ad[:description] %>
-  </div>
-  <% end %>
-</div>
-
-<hr>
-<div class='project-header'>
-  <h2 id='projects-header'>Web</h2>
-  <p>All modern businesses value a well-written webpage.</p>
-  <p>Whether it's a landing page, sales page or information page, you'll want your words to shine through.</p> 
-  <p>I can help you improve engagement and SEO ranking by building.</p>
-  <p>Click the pics to see for yourself.</p>
-</div>
-  <div class="project-grid">
-  <% @websites.each do |website| %>
-  <div class="project-section">
-    <h3 class='<%= website[:class_name].downcase %> header middle'>
-      <%= link_to "#{website[:name]}", "#{website[:link]}", target: '_blank', rel: 'noopener'%>
-    </h3>
-    <div class="project-container">
-      <div>
-        <%= link_to "#{website[:link]}", target: '_blank', rel:'noopener' do %> 
-            <%= image_tag website[:image_link], class: "project-image", alt: website[:alt] %>
+      <% if ad[:link] %>
+        <%= link_to ad[:link], rel: 'noopener', target: '_blank' do %>
+          <%= image_tag ad[:image_link], class: 'project-image', alt: ad[:alt] %>
         <% end %>
-        <%= sanitize website[:description] %>
-      </div>
+        <% else %>
+          <%= image_tag ad[:image_link], class: 'project-image modal-image-check', data: {image_link: ad[:image_link]}, alt: ad[:alt] %>
+      <% end %>
+    </div>
+    <div class="description-container">
+      <h4>Brief</h4>
+      <p><%= sanitize ad[:brief] %></p>
+      <h4>Description</h4>
+      <p><%= sanitize ad[:description] %></p>
+    </div>
     </div>
   </div>
   <% end %>
-  </div>
-<hr>
-
-<div class="project-header">
-  <h2 id='projects-header'>Email Newsletters</h2>
-  <p>Keeping customers can be complicated without clear direction.</p>
-  <p>With one of my carefully constructed email newsletters, you'll find customers in no time.</p>
 </div>
-  <div class="newsletter-grid">
-    <% @email_newsletters.each do |newsletter| %>
-      <div>
-        <h3 class="newsletter-header"><%= newsletter[:name] %></h3>
-        <div class="newsletter" data-image-link=<%="/assets/#{newsletter[:image_link]}"%>>
-          <%= image_tag newsletter[:image_link], class: "newsletter-image", alt:"image"%>
-          <%= sanitize newsletter[:description] %>
-        </div>
-      </div>
-    <% end %>
-  </div>
-<hr>
-<div class='project-header'>
-  <h2 id='projects-header'>Blogs and Articles</h2>
-  <p>I produce blogs and articles on improving your SEO output.</p>
-</div>
-  <% @blogs_and_articles.each do |article| %>
-  <div class="project-section">
-
-    <h3 class='header middle'>
-      <%= link_to "Test", "/#", target: '_blank', rel: 'noopener'%>
-    </h3>
-    <div class="project-container">
-    <%= link_to "#{article[:link]}", target: '_blank', rel:'noopener' do %> 
-          
-    <% end %>
-      <%= sanitize article[:description] %>
-    </div>
-  </div>
-  <% end %>
 <hr>

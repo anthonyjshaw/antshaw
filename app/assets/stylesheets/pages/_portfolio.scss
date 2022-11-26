@@ -52,6 +52,7 @@
  		grid-auto-rows: minmax(100px, auto);
 	}
 
+
 	.project-image {
 		transition: transform 0.5s;
 	}
@@ -62,6 +63,19 @@
 
 	.project-section {
 		display: flex;
+		h3 {
+			text-align: center;
+		}
+		div {
+			display: flex;
+			.image-container {
+				width: 50%;
+			}
+			.description-container {
+				display: block;
+				width: 50%;
+			}
+		}
 		flex-direction: column;
 		.image-container {
 			display: flex;

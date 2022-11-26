@@ -202,7 +202,13 @@ a.active {
   }
   
 
-
+.modal-image-container {
+  left: 10vw;
+  display: flex;
+  position: fixed;
+  top: 15vh;
+  z-index: 2;
+}
 
  .footer-links {
   display: inline;
