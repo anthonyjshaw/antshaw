@@ -1,11 +1,15 @@
 const scrollToPage = () => {
 	const arrowBox = document.querySelector('#arrow-box');
-	if (window.location.pathname === "/") {
-		arrowBox.style.display = 'none';
+	if (arrowBox) {
+		arrowBox.addEventListener('click', _ => {
+			if ((window.scrollY + window.innerHeight) >= document.body.scrollHeight) {
+				arrowBox.style.transform = 'rotate(180deg)'
+				window.scrollBy(0,-document.body.scrollHeight);
+			} else {
+				window.scrollBy(0,window.innerHeight - 100);
+			}
+		});
 	}
-	arrowBox.addEventListener('click', _ => {
-		window.scrollBy(0,window.innerHeight);
-	});
 }
 
 export default scrollToPage;

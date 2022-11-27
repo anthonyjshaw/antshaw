@@ -1,9 +1,32 @@
 
 @media(max-width: 390px) {
 	.project-container {
+		text-align: center;
+
 		flex-direction: column;
+		align-items: center;
+		a {
+			text-align: center;
+		}
+
+		div {
+			text-align: center;
+		}
+	}
+
+	.description-container {
+		text-align: center;
+	}
+
+	.image-container {
+		text-align: center;
+	}
+	.newsletter-image {
+		height: 390px;
+		width: 275.39px;
 	}
 }
+
 
 .project-header {
 	text-align: center;
@@ -15,13 +38,63 @@
 
 .project-container {
 	display: flex;
-	flex-direction: column;
 	p {
 	  margin-bottom: 1em;
 	  margin-top: 1em;
 	}
-	a:hover {
-		transform: scale(1.2);
+	a {
+		height: auto;
+		
 	}
 }
 
+@media (min-width: 720px) {
+	
+	.project-image {
+		transition: transform 0.5s;
+	}
+	.project-image:hover {
+		cursor: pointer;
+		transform: scale(1.5);
+	}
+
+	.project-section {
+		display: flex;
+		h3 {
+			text-align: center;
+		}
+		div.project-example {
+			display: flex;
+			height: 300px;
+			.image-container {
+				width: 50%;
+			}
+			.description-container {
+				display: block;
+				width: 50%;
+			}
+		}
+		.example-row-reverse {
+			flex-direction: row-reverse;
+		}
+		flex-direction: column;
+		.image-container {
+			display: flex;
+    		align-items: center;
+			height: 100%;
+		}
+	}
+	.project-container {
+		flex-direction: row;
+
+		a {
+			img {
+				transition: transform 0.5s;
+			}
+	
+			img:hover {
+				transform: scale(1.2);
+			}
+		}
+	}
+}

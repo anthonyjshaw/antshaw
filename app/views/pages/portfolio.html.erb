@@ -2,7 +2,9 @@
   <div class="text-center my-5 mt-5">
     <div class="translate">
       <h1 class="home-title">Portfolio</h1>
-      <p>Ad copy, landing pages, newsletters and more.</p>
+      <div id="arrow-box" class="arrow-box">
+        <%= image_tag 'arrow.svg', alt: "Graphic of directional arrow box.", aria_label: "Click to see the portfolio"%>
+      </div>
     </div>
   </div>
 </div>
@@ -10,83 +12,33 @@
 <hr>
 
 <div class="project-header">
-  <h2 id='projects-header'>Ad Copy</h2>
-  <h3>Ads make the world go round.</h3> 
-  <p>With one of my carefully constructed email newsletters, you'll find customers in no time.</p>
+  <h2 id='projects-header'>Work</h2>
+  <p>Brands need words that pop.</p>
+  <p>Check out some examples of my ad copy below.</p>
 </div>
-  <% @email_newsletters.each do |newsletter| %>
+<hr>
+<div id="portfolio-examples" class="portfolio-examples">
+  <% @examples.each do |ad| %>
   <div class="project-section">
-    <h3 class='header middle'>
-      <%= link_to "#{newsletter[:link]}", "/#", target: '_blank', rel: 'noopener'%>
-    </h3>
-    <div class="project-container">
-    <%= link_to "#{newsletter[:link]}", target: '_blank', rel:'noopener' do %> 
-          
-    <% end %>
-      <%= sanitize newsletter[:description] %>
+
+    <div class="<%= @examples.index(ad) % 2 === 0 ? "example-row-reverse" : "example-row" %> project-example"> 
+    <div class= "image-container">
+      <% if ad[:link] %>
+        <%= link_to ad[:link], rel: 'noopener', target: '_blank' do %>
+          <%= image_tag ad[:image_link], class: 'project-image', alt: ad[:alt] %>
+        <% end %>
+        <% else %>
+          <%= image_tag ad[:image_link], class: 'project-image modal-image-check', data: {image_link: ad[:image_link]}, alt: ad[:alt] %>
+      <% end %>
+    </div>
+    <div class="description-container">
+      <h4>Brief</h4>
+      <p><%= sanitize ad[:brief] %></p>
+      <h4>Description</h4>
+      <p><%= sanitize ad[:description] %></p>
+    </div>
     </div>
   </div>
+  <hr>
   <% end %>
-
-<hr>
-<div class='project-header'>
-  <h2 id='projects-header'>Web</h2>
-  <h3>Landing pages.</h3>
-  <p>I produce content for websites that maximises sales and improves SEO rankings.</p>
 </div>
-  <div class="project-grid">
-  <% @websites.each do |website| %>
-  <div class="project-section">
-    <h3 class='<%= website[:class_name].downcase %> header middle'>
-      <%= link_to "#{website[:name]}", "#{website[:link]}", target: '_blank', rel: 'noopener'%>
-    </h3>
-    <div class="project-container">
-    <%= link_to "#{website[:link]}", target: '_blank', rel:'noopener' do %> 
-          <%= image_tag website[:image_link], class: "project-image" %>
-    <% end %>
-      <%= sanitize website[:description] %>
-    </div>
-  </div>
-  <% end %>
-  </div>
-<hr>
-
-<div class="project-header">
-  <h2 id='projects-header'>Email Newsletters</h2>
-  <h3>Looking for that sweet audience retention?</h3> 
-  <p>With one of my carefully constructed email newsletters, you'll find customers in no time.</p>
-</div>
-  <% @email_newsletters.each do |newsletter| %>
-  <div class="project-section">
-    <h3 class='header middle'>
-      <%= link_to "#{newsletter[:link]}", "/#", target: '_blank', rel: 'noopener'%>
-    </h3>
-    <div class="project-container">
-    <%= link_to "#{newsletter[:link]}", target: '_blank', rel:'noopener' do %> 
-          
-    <% end %>
-      <%= sanitize newsletter[:description] %>
-    </div>
-  </div>
-  <% end %>
-
-<hr>
-
-<div class='project-header'>
-  <h2 id='projects-header'>Blogs and Articles</h2>
-  <p>I produce blogs and articles on improving your SEO output.</p>
-</div>
-  <% @blogs_and_articles.each do |article| %>
-  <div class="project-section">
-    <h3 class='header middle'>
-      <%= link_to "Test", "/#", target: '_blank', rel: 'noopener'%>
-    </h3>
-    <div class="project-container">
-    <%= link_to "#{article[:link]}", target: '_blank', rel:'noopener' do %> 
-          
-    <% end %>
-      <%= sanitize article[:description] %>
-    </div>
-  </div>
-  <% end %>
-<hr>

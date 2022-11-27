@@ -3,7 +3,7 @@ const addPadding = (page, element) => {
 	const currentPage = window.location.pathname;
 	if (currentPage === page && queryedElement) {
 		console.log(true)
-		queryedElement.style.padding = "88px";
+		// queryedElement.style.padding = "88px";
 	}
 
 }

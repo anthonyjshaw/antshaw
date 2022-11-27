@@ -31,19 +31,29 @@ html {
   scroll-behavior: smooth;
 }
 
-.translate {
-  animation: ty 1s ease 1;
+.width-90 {
+  margin: auto;
+  width: 90%;
 }
-
 
 @keyframes ty {
     from {
-        transform: translateY(-50%);
+        opacity: 0;
     } 
     
     to {
-        transform: translateY(0%);
+        opacity: 1;
     }
+}
+
+@keyframes ty-mobile {
+  from {
+    opacity: 0;
+} 
+
+to {
+    opacity: 1;;
+}
 }
 
 .middle
@@ -72,9 +82,9 @@ a.middle:before {
   font-family: 'Leckerli One', sans-serif;
 }
 
-.whodunnit {
-  font-family: 'Reenie Beanie', cursive;
-}
+// .whodunnit {
+//   font-family: 'Reenie Beanie', cursive;
+// }
 
 .collapse.width {
     height: auto;
@@ -155,6 +165,17 @@ a.active {
 // Small devices (landscape phones, 576px and up)
 @media (max-width: 576px) {
 
+  .modal-image-container {
+    top: 70px;
+    left: 0px;
+    z-index: 2;
+    position: fixed;
+    width: 100vw;
+    height: auto;
+    overflow: scroll;
+  } 
+  
+  
   .header {
     text-align: center;
   }
@@ -168,7 +189,7 @@ a.active {
   .project-image {
     width: 90%;
   }
- }
+}
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
@@ -178,8 +199,7 @@ a.active {
 // Large devices (desktops, 992px and up)
 @media (max-width: 992px) {
   .arrow-box {
-    top: 18vh;
-    right: 2vh;
+    
     svg {
       width: 10px;
     }
@@ -188,17 +208,18 @@ a.active {
 
 // X-Large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
+  .translate {
+    animation: ty 2s;
+  }
+  
 
-
-p {
-
-  color: #131313;
-    font-size: 1.0rem;
-    font-weight: 400;
-    line-height: 1.8;
-    margin-bottom: 1.8rem;
-
- }
+.modal-image-container {
+  left: 10vw;
+  display: flex;
+  position: fixed;
+  top: 15vh;
+  z-index: 2;
+}
 
  .footer-links {
   display: inline;
@@ -215,8 +236,6 @@ p {
 // XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: 1400px) {
   .arrow-box {
-    top: 50vh;
-    right: 24vh;
     height: 40px;
   }
 }
@@ -224,7 +243,8 @@ p {
   
 
  .arrow-box {
-  position: fixed;
+  display: flex;
+  justify-content: center;
   cursor: pointer;
   transition: transform 0.1s ease-in  ;
 }
@@ -232,4 +252,20 @@ p {
 .arrow-box:hover {
   transform: translateY(20%);
 }
+@media (max-width:400px) {
+  .translate {
+    animation: ty 2s;
+  }
+  
+  p {
+    font-size: 18px;
+  }
+}
+p {
 
+  color: #131313;
+    font-weight: 400;
+    line-height: 1.8;
+    margin-bottom: 1.8rem;
+
+ }

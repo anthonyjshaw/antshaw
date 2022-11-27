@@ -28,7 +28,7 @@
    </head>
    <body>
       <nav class="navbar nav-transparent fixed-top">
-         <%= link_to (image_tag "antshawlogo.svg", class: "logo"), '/', class: "nav-link", rel: "noopener" %>
+         <%= link_to (image_tag "antshawlogo.svg", class: "logo", alt: "Image of Ant Shaw logo. All rights reserved."), '/', class: "nav-link", aria_label: "Click to return to the home page.", rel: "noopener" %>
          <%= link_to "About", 'about', class:"nav-link", rel:'noopener' %>
          <%= link_to "Portfolio", 'portfolio', class:"nav-link text-center", rel:'noopener' %>
          <%= link_to "Contact", 'contact', class:"nav-link", rel:'noopener' %>
@@ -36,12 +36,12 @@
       </nav>
       <div class="flex-wrapper">
         <%= yield %>
-        <div class='arrow-box' id="arrow-box">
+        <%# <div class='arrow-box' id="arrow-box">
             <svg width="50" height="22" viewBox="0 0 50 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow" id="navigation-arrow">
                <line x1="1.40578" y1="2.93268" x2="26.4058" y2="19.9327" stroke="black" stroke-width="5"/>
                <line y1="-2.5" x2="30.2324" y2="-2.5" transform="matrix(-0.826927 0.56231 0.56231 0.826927 50 5)" stroke="black" stroke-width="5"/>
             </svg>
-        </div>
+        </div> %>
       </div>
    </body>
 </html>
