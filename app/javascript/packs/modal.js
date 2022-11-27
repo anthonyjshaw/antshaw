@@ -25,13 +25,17 @@ function getModal() {
 			document.body.style.whiteSpace = 'no-wrap';
 			document.body.append(modalImageContainer)
 			modalImageContainer.append(img)
-			modalImageContainer.style.height = '500px'
+	
 			modalImageContainer.style.overflow = 'scroll'
 			img.classList.add('modal-image')
 			img.src = `/assets/${e.dataset.imageLink}`;
-			console.log(e.naturalHeight / 2)
-			modalImageContainer.style.left = `${e.naturalHeight/ window.innerWidth*25}vw`;
-			img.style.height = `${e.naturalHeight * 0.70}px`;
+			if (window.innerWidth > 400) {
+				modalImageContainer.style.left = `${e.naturalHeight/ window.innerWidth*25}vw`;
+				img.style.height = `${e.naturalHeight * 0.70}px`;
+				img.style.width = 'auto';
+			} else {
+				img.style.width = "100vw";
+			}
 			// image.style.backgroundRepeat = 'no-repeat';
 			overlay.style.opacity = 0.7;
 			overlay.style.zIndex = '1';

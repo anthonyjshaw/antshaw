@@ -12,18 +12,17 @@
 <hr>
 
 <div class="project-header">
-  <h2 id='projects-header'>Ads</h2>
+  <h2 id='projects-header'>Work</h2>
   <p>Brands need words that pop.</p>
   <p>Check out some examples of my ad copy below.</p>
 </div>
+<hr>
 <div id="portfolio-examples" class="portfolio-examples">
   <% @examples.each do |ad| %>
   <div class="project-section">
-    <h3 class='header middle'>
-      <%= ad[:name] %>
-    </h3>
-    <div class="project-example"> 
-    <div class="image-container">
+
+    <div class="<%= @examples.index(ad) % 2 === 0 ? "example-row-reverse" : "example-row" %> project-example"> 
+    <div class= "image-container">
       <% if ad[:link] %>
         <%= link_to ad[:link], rel: 'noopener', target: '_blank' do %>
           <%= image_tag ad[:image_link], class: 'project-image', alt: ad[:alt] %>
@@ -40,6 +39,6 @@
     </div>
     </div>
   </div>
+  <hr>
   <% end %>
 </div>
-<hr>

@@ -164,6 +164,17 @@ a.active {
 
 // Small devices (landscape phones, 576px and up)
 @media (max-width: 576px) {
+
+  .modal-image-container {
+    top: 70px;
+    left: 0px;
+    z-index: 2;
+    position: fixed;
+    width: 100vw;
+    height: auto;
+    overflow: scroll;
+  } 
+  
   
   .header {
     text-align: center;
@@ -178,7 +189,7 @@ a.active {
   .project-image {
     width: 90%;
   }
- }
+}
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
