@@ -22,13 +22,13 @@
   <div class="project-section">
 
     <div class="<%= @examples.index(ad) % 2 === 0 ? "example-row-reverse" : "example-row" %> project-example"> 
-    <div class= "image-container">
+    <div class= "image-container <%= @examples.index(ad) % 2 === 0 ? "flex-end" : "flex-start"%>">
       <% if ad[:link] %>
         <%= link_to ad[:link], rel: 'noopener', target: '_blank' do %>
-          <%= image_tag ad[:image_link], class: 'project-image', alt: ad[:alt] %>
+          <%= image_tag ad[:image_link], class: "project-image", alt: ad[:alt] %>
         <% end %>
         <% else %>
-          <%= image_tag ad[:image_link], class: 'project-image modal-image-check', data: {image_link: ad[:image_link]}, alt: ad[:alt] %>
+          <%= image_tag ad[:image_link], class: "project-image modal-image-check", data: {image_link: ad[:image_link]}, alt: ad[:alt] %>
       <% end %>
     </div>
     <div class="description-container">

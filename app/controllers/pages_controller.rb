@@ -6,8 +6,8 @@ class PagesController < ApplicationController
 
   end
 
-  def about
-  end
+  # def about
+  # end
 
   def portfolio
 
@@ -18,7 +18,7 @@ class PagesController < ApplicationController
       brief: "Facebook ad post for productivity software.",
       alt: "Image of Clearcut poster.",
       image_link: "clearcut-ad.png",
-      description: "This ad demonstrates..."
+      description: "Productivity software is competitive.\n\nIn this ad, I wanted to highlight the pain point of using something. Using the example of Dave"
     },
     {
       name: 'Landing Page',
@@ -27,15 +27,14 @@ class PagesController < ApplicationController
       image_link: 'my-mode-image.png',
       alt: "Image of My Mode landing page.",
       brief: 'Landing page copy for fashion social media site <span class="my-mode">my mode</span>.',
-      description: "I used the tagline \"Fashion favours the brave\"."
-      
+      description: "This site is all about being bold. I used the tagline \"Fashion favours the brave\"."
     },
     {
         name: 'Email Newsletter',
         class_name: 'test',
         brief: 'An email newsletter designed to showcase short story platform nuvell.',
         image_link: 'email-newsletter1.png',
-        description: "This ad demonstrates...",
+        description: "Newsletters are a great way of keeping customers.",
     },
     {
         name: 'Marketing Blog',
