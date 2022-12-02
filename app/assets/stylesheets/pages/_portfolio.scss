@@ -1,5 +1,9 @@
 
-@media(max-width: 390px) {
+@media(max-width: 718px) {
+
+	.project-image {
+		width: 200px;
+	}
 	.project-container {
 		text-align: center;
 
@@ -48,7 +52,37 @@
 	}
 }
 
+@media (min-width: 719px) {
+	.project-section {
+		display: flex;
+		flex-direction: column;
+		
+	}
+	.image-container {
+		width: 50%;
+	}
+	
+	.description-container {
+		width: 50%;
+	}
+	.project-image {
+		height: 150px;
+		width: auto;
+	}
+
+	.arrow-box {
+		height: 40px;
+		width: auto;
+	}
+}
+
 @media (min-width: 720px) {
+
+	.arrow-box {
+		img {
+			width: 40px;
+		}
+	}
 	
 	.project-image {
 		transition: transform 0.5s;

@@ -27,11 +27,11 @@ function getModal() {
 			img.classList.add('modal-image')
 			img.src = e.src.replace('http://localhost:3000' || "https://www.antshaw.com", "");
 			if (window.innerWidth > 400) {
-				modalImageContainer.style.left = `${e.naturalHeight/ window.innerWidth*25}vw`;
 				img.style.height = `${e.naturalHeight * 0.70}px`;
 				img.style.width = 'auto';
 			} else {
 				img.style.width = "100vw";
+				img.style.height = 'auto';
 			}
 			// image.style.backgroundRepeat = 'no-repeat';
 			overlay.style.opacity = 0.7;
@@ -51,6 +51,15 @@ function getModal() {
 		modalImageContainer.remove()
 		overlay.style.opacity = 0.0;
 		overlay.style.zIndex = '-1';
+	});
+
+	modalImageContainer.addEventListener('click', _ => {
+		if (img) {
+			img.remove();
+			modalImageContainer.remove()
+			overlay.style.opacity = 0.0;
+			overlay.style.zIndex = '-1';
+		}
 	})
 
 }

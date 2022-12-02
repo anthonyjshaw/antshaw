@@ -29,6 +29,7 @@ import scrollToPage from './scroll_to_page';
 import {addPadding} from './addPadding';
 import getModal from "./modal";
 import { changeToMobileNumber } from "./change_to_mobile_number";
+import { hideNavbarOnScroll } from "./hide_navbar_on_scroll";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
@@ -40,4 +41,5 @@ document.addEventListener('turbolinks:load', () => {
   changeToMobileNumber()
   getModal()
   addPadding('/portfolio', '.container-page');
+  hideNavbarOnScroll()
 });

@@ -3,19 +3,12 @@
     <div class="translate">
       <h1 class="home-title">Portfolio</h1>
       <div id="arrow-box" class="arrow-box">
-        <%= image_tag 'arrow.svg', alt: "Graphic of directional arrow box.", aria_label: "Click to see the portfolio"%>
+        <%= image_tag 'arrow.svg', alt: "Graphic of directional arrow box.", aria_label: "Click to see the portfolio."%>
       </div>
     </div>
   </div>
 </div>
 <div class="container-page">
-<hr>
-
-<div class="project-header">
-  <h2 id='projects-header'>Work</h2>
-  <p>Brands need words that pop.</p>
-  <p>Check out some examples of my ad copy below.</p>
-</div>
 <hr>
 <div id="portfolio-examples" class="portfolio-examples">
   <% @examples.each do |ad| %>
@@ -35,7 +28,13 @@
       <h4>Brief</h4>
       <p><%= sanitize ad[:brief] %></p>
       <h4>Description</h4>
-      <p><%= sanitize ad[:description] %></p>
+      <% if ad[:description].include? "\n\n" %>
+        <% ad[:description].split("\n\n").each do |line| %>
+          <p><%= sanitize line %></p>
+        <% end %>
+      <% else %>
+        <p><%= sanitize ad[:description] %></p>
+      <% end %>
     </div>
     </div>
   </div>
