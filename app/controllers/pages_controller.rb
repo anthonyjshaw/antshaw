@@ -1,13 +1,4 @@
 class PagesController < ApplicationController
-  def home
-  end
-
-  def home_copywriting
-
-  end
-
-  # def about
-  # end
 
   def portfolio
 
@@ -48,6 +39,4 @@ class PagesController < ApplicationController
     ]
   end
 
-  def blog
-  end
 end
