@@ -3,39 +3,38 @@
     <div class="translate">
       <h1 class="home-title">Portfolio</h1>
       <div id="arrow-box" class="arrow-box">
-        <%= image_tag 'arrow.svg', alt: "Graphic of directional arrow box.", aria_label: "Click to see the portfolio"%>
+        <%= image_tag 'arrow.svg', alt: "Graphic of directional arrow box.", aria_label: "Click to see the portfolio."%>
       </div>
     </div>
   </div>
 </div>
 <div class="container-page">
 <hr>
-
-<div class="project-header">
-  <h2 id='projects-header'>Work</h2>
-  <p>Brands need words that pop.</p>
-  <p>Check out some examples of my ad copy below.</p>
-</div>
-<hr>
 <div id="portfolio-examples" class="portfolio-examples">
   <% @examples.each do |ad| %>
   <div class="project-section">
 
     <div class="<%= @examples.index(ad) % 2 === 0 ? "example-row-reverse" : "example-row" %> project-example"> 
-    <div class= "image-container">
+    <div class= "image-container <%= @examples.index(ad) % 2 === 0 ? "flex-end" : "flex-start"%>">
       <% if ad[:link] %>
         <%= link_to ad[:link], rel: 'noopener', target: '_blank' do %>
-          <%= image_tag ad[:image_link], class: 'project-image', alt: ad[:alt] %>
+          <%= image_tag ad[:image_link], class: "project-image", alt: ad[:alt] %>
         <% end %>
         <% else %>
-          <%= image_tag ad[:image_link], class: 'project-image modal-image-check', data: {image_link: ad[:image_link]}, alt: ad[:alt] %>
+          <%= image_tag ad[:image_link], class: "project-image modal-image-check", data: {image_link: ad[:image_link]}, alt: ad[:alt] %>
       <% end %>
     </div>
     <div class="description-container">
       <h4>Brief</h4>
       <p><%= sanitize ad[:brief] %></p>
       <h4>Description</h4>
-      <p><%= sanitize ad[:description] %></p>
+      <% if ad[:description].include? "\n\n" %>
+        <% ad[:description].split("\n\n").each do |line| %>
+          <p><%= sanitize line %></p>
+        <% end %>
+      <% else %>
+        <p><%= sanitize ad[:description] %></p>
+      <% end %>
     </div>
     </div>
   </div>

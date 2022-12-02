@@ -22,19 +22,25 @@
 
 
 
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+
+  color: #131313;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 1.8rem;
+
+ }
+
+
 .container-page {
   width: 77vw;
   margin:auto;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-.width-90 {
-  margin: auto;
-  width: 90%;
-}
 
 @keyframes ty {
     from {
@@ -49,17 +55,17 @@ html {
 @keyframes ty-mobile {
   from {
     opacity: 0;
-} 
+  } 
 
-to {
-    opacity: 1;;
-}
+  to {
+      opacity: 1;;
+  }
 }
 
-.middle
-{
+.middle {
     position: relative;
 }
+
 a.middle:hover:before {
   visibility: visible;
   transform: scaleX(1);
@@ -81,10 +87,6 @@ a.middle:before {
 .my-mode {
   font-family: 'Leckerli One', sans-serif;
 }
-
-// .whodunnit {
-//   font-family: 'Reenie Beanie', cursive;
-// }
 
 .collapse.width {
     height: auto;
@@ -164,7 +166,9 @@ a.active {
 
 // Small devices (landscape phones, 576px and up)
 @media (max-width: 576px) {
-
+  .arrow-box {
+    height: 40px;
+  }
   .modal-image-container {
     top: 70px;
     left: 0px;
@@ -186,9 +190,7 @@ a.active {
     text-align: center;
   }
 
-  .project-image {
-    width: 90%;
-  }
+
 }
 
 // Medium devices (tablets, 768px and up)
@@ -214,11 +216,12 @@ a.active {
   
 
 .modal-image-container {
-  left: 10vw;
   display: flex;
+  justify-content: center;
   position: fixed;
   top: 15vh;
   z-index: 2;
+  width: 100vw;
 }
 
  .footer-links {
@@ -257,15 +260,6 @@ a.active {
     animation: ty 2s;
   }
   
-  p {
-    font-size: 18px;
-  }
 }
-p {
 
-  color: #131313;
-    font-weight: 400;
-    line-height: 1.8;
-    margin-bottom: 1.8rem;
 
- }

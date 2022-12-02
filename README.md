@@ -1,1 +1,7 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+# Ant Shaw
+
+<hr/>
+
+## Introduction
+
+This is the repo for my portfolio page. It's a Rails app that is more or less static.
