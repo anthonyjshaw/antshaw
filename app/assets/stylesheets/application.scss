@@ -13,15 +13,6 @@
 @import "pages/index";
 
 
-.flex-wrapper {
-  display: flex;
-  min-height: 95vh;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-
-
 html {
   scroll-behavior: smooth;
 }
@@ -32,14 +23,21 @@ p {
     font-weight: 400;
     line-height: 1.4;
     margin-bottom: 1.8rem;
-
+    font-family: "Butler";
  }
 
-
-.container-page {
-  width: 77vw;
-  margin:auto;
+ a {
+  text-decoration: none;
+  color: #615420;
+  transition: color 0.5s ease;
 }
+
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+
 
 
 @keyframes ty {
@@ -60,6 +58,30 @@ p {
   to {
       opacity: 1;;
   }
+}
+
+
+
+ h1 {
+  font-size: 6em;
+  text-align: center;
+  margin-bottom: 0.67em;
+  margin-top: 0.67em;
+}
+
+h2 {
+  font-size: 3rem;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+.container-page {
+  width: 77vw;
+  margin:auto;
 }
 
 .middle {
@@ -88,17 +110,6 @@ a.middle:before {
   font-family: 'Leckerli One', sans-serif;
 }
 
-.collapse.width {
-    height: auto;
-    width:0;
-    -webkit-transition: width 0.35s ease;
-    -moz-transition: width 0.35s ease;
-    -o-transition: width 0.35s ease;
-    transition: width 0.35s ease;
-}
-
-
-
 .flx-container {
   display: flex;
   margin: auto;
@@ -107,44 +118,22 @@ a.middle:before {
   align-items: center;
 }
 
- h1 {
-  font-size: 6em;
-  text-align: center;
-  margin-bottom: 0.67em;
-  margin-top: 0.67em;
-}
-
-h2 {
-  font-size: 3rem;
-  margin-top: 0.83em;
-  margin-bottom: 0.83em;
-}
-
-h3 {
-  font-size: 2rem;
-}
 .header {
   text-align: left;
 }
 
-.tester{
-  font-family: 'Source Sans Pro', sans-serif;
+
+.flex-wrapper {
+  display: flex;
+  min-height: 95vh;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .img-show {
   height: 200px;
 }
 
-a {
-  text-decoration: none;
-  color: #615420;
-  transition: color 0.5s ease;
-}
-
-a:hover {
-  text-decoration: none;
-  color: black;
-}
 
 a.active {
   color: black;
@@ -158,8 +147,6 @@ a.active {
   backdrop-filter: blur(5px);
 }
 
-
-
 .border-bottom-black {
   border-bottom: black 1px solid;
 }
@@ -169,6 +156,7 @@ a.active {
   .arrow-box {
     height: 40px;
   }
+
   .modal-image-container {
     top: 70px;
     left: 0px;
@@ -178,7 +166,6 @@ a.active {
     height: auto;
     overflow: scroll;
   } 
-  
   
   .header {
     text-align: center;
@@ -190,13 +177,9 @@ a.active {
     text-align: center;
   }
 
-
 }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
 
- }
 
 // Large devices (desktops, 992px and up)
 @media (max-width: 992px) {

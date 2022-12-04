@@ -12,8 +12,12 @@
     align-items: center;
 	background-color: #e3a446;
 	border-radius: 50%;
+	color: black;
+	
 }
-
+.home-title {
+	font-family: 'Now';
+}
 .circle-logo:hover {
 	cursor: pointer;
 	
@@ -22,7 +26,6 @@
 .circle-container {
 	display: flex;
     margin: auto;
-	width: 55vw;
 	justify-content: space-around;
 	a {
 		transition: transform 0.1s;
@@ -41,9 +44,10 @@
 	width: 500px;
 }
 
-@media (max-width:390px) {
+@media (max-width:719px) {
 	h1.home-title {
 		font-size: 4em;
+		
 	}
 	.circle-container {
 		width: 100vw;
