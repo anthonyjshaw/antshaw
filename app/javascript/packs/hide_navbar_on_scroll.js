@@ -7,7 +7,6 @@ export const hideNavbarOnScroll = () => {
 			navbar.style.top = "0";
 		} else {
 			navbar.style.top = "-59px";
-			console.log("hidden");
 		}
 
 		position1 = position2
