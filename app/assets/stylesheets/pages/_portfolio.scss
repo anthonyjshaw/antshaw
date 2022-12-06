@@ -85,6 +85,8 @@
 	}
 }
 
+
+
 @media (min-width: 720px) {
 	.home-title {
 		letter-spacing: 10px;
@@ -130,11 +132,12 @@
 			flex-direction: row-reverse;
 		}
 		flex-direction: column;
-		.image-container {
-			display: flex;
-    		align-items: center;
-			height: 100%;
-		}
+		
+	}
+	.image-container {
+		display: flex;
+		align-items: center;
+		height: 100%;
 	}
 	.project-container {
 		flex-direction: row;
@@ -148,6 +151,20 @@
 				transform: scale(1.2);
 			}
 		}
+	}
+}
+
+@media (min-width: 820px) {
+	
+	.project-section {
+		height: 500px;
+	}
+	.description-container {
+		height: 473px;
+	}
+
+	.image-container {
+		height: 473px;
 	}
 }
 
