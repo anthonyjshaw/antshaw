@@ -21,7 +21,20 @@ $headers-font: "Xanh Mono', monospace";
 }
 
 @font-face {
-  font-family: "Now";
+  font-display: swap;
+  font-family: "Now Regular";
+  src: font-url('now/Now-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Now Black";
   src: font-url('now/Now-Black.otf') format('opentype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Now Thin";
+  src: font-url('now/Now-Thin.otf') format('opentype');
 }
 $my-font: 'Now';

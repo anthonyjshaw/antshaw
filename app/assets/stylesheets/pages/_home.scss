@@ -16,7 +16,8 @@
 	
 }
 .home-title {
-	font-family: 'Now';
+	font-family: "Now Black";
+
 }
 .circle-logo:hover {
 	cursor: pointer;
@@ -60,4 +61,11 @@
 	.arrow-box {
 		top: 300px;
 	}
+}
+
+@media (min-width: 1200px) {
+	h1.home-title {
+		letter-spacing: 40px;
+	}
+
 }
