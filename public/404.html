@@ -5,14 +5,17 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
     body {
-      margin: 0;
-    font-family: "Butler";
+    margin: 0;
+    font-family: "Now-Regular";
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     color: #0E0000;
     text-align: left;
     background-color: #fccb80;
+    }
+    h1 {
+      font-family: "Now-Black";
     }
     .nav-transparent {
     display: flex;
@@ -21,7 +24,28 @@
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
 }
+p {
 
+color: #131313;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 1.8rem;
+  font-family: "Butler";
+}
+
+a {
+text-decoration: none;
+color: #615420;
+transition: color 0.5s ease;
+}
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+nav {
+  transition: top ease-out 0.3s;
+}
 .nav-link {
     display: block;
     padding: 0.5rem 1rem;
@@ -43,7 +67,7 @@
     <a class="nav-link" rel="noopener" href="contact">Contact</a>
     <!---<a class="nav-link" rel="noopener" href="blog">Blog</a>--->
  </nav>
-  <div class="dialog">
+  <div class="dialog container">
     <div>
       <h1>404 Not Found</h1>
       <p>Sorry! There's no page here.</p>

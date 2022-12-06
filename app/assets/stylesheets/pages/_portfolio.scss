@@ -1,9 +1,18 @@
 
+.project-image {
+	box-shadow: 0px 0px 30px 3px rgba(0,0,0, 0.5);
+}
+
+.description-subheading {
+	font-size: 2em;
+}
+
 @media(max-width: 718px) {
 
 	.project-image {
 		width: 200px;
 	}
+
 	.project-container {
 		text-align: center;
 
@@ -77,6 +86,9 @@
 }
 
 @media (min-width: 720px) {
+	.home-title {
+		letter-spacing: 10px;
+	}
 
 	.arrow-box {
 		img {
@@ -86,7 +98,7 @@
 	
 	.project-image {
 		transition: transform 0.5s;
-		height: 200px;
+		height: 150px;
 		width: auto;
 	}
 	.project-image:hover {
@@ -96,6 +108,8 @@
 
 	.project-section {
 		display: flex;
+		margin-bottom: 59px;
+		padding: 16px 0px;
 		h3 {
 			text-align: center;
 		}
@@ -134,5 +148,12 @@
 				transform: scale(1.2);
 			}
 		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.project-image {
+		height: 200px;
+		width: auto;
 	}
 }

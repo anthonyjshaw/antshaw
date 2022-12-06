@@ -28,10 +28,19 @@
    </head>
    <body>
       <nav class="navbar nav-transparent fixed-top">
-         <%= link_to (image_tag "antshawlogo.svg", class: "logo", alt: "Image of Ant Shaw logo. All rights reserved."), '/', class: "nav-link", aria_label: "Click to return to the home page.", rel: "noopener" %>
-         <%= link_to "About", 'about', class:"nav-link", rel:'noopener' %>
-         <%= link_to "Portfolio", 'portfolio', class:"nav-link text-center", rel:'noopener' %>
-         <%= link_to "Contact", 'contact', class:"nav-link", rel:'noopener' %>
+         <div style="display:flex;flex-direction:column;">
+            <%= link_to (image_tag "antshawlogo.svg", class: "logo", alt: "Image of Ant Shaw logo. All rights reserved."), '/', class: "nav-link", aria_label: "Click to return to the home page.", rel: "noopener" %>
+         <%# <div style="background:black;height:1px;width:10px;"></div> %>
+         </div>
+         <div>
+            <%= link_to "About", 'about', class:"nav-link", rel:'noopener' %>
+         </div>
+         <div>
+            <%= link_to "Portfolio", 'portfolio', class:"nav-link text-center", rel:'noopener' %>
+         </div>
+         <div>
+            <%= link_to "Contact", 'contact', class:"nav-link", rel:'noopener' %>
+         </div>
          <!---<%= link_to "Blog", 'blog', class:"nav-link", rel:'noopener' %>--->
       </nav>
       <div class="flex-wrapper">

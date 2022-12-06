@@ -19,4 +19,22 @@ $headers-font: "Xanh Mono', monospace";
   src: font-url('Butler_Webfont/Butler.woff') format('woff'),
        font-url('Butler_Webfont/Butler.woff2') format('woff2');
 }
-$my-font: "Butler";
+
+@font-face {
+  font-display: swap;
+  font-family: "Now Regular";
+  src: font-url('now/Now-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Now Black";
+  src: font-url('now/Now-Black.otf') format('opentype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Now Thin";
+  src: font-url('now/Now-Thin.otf') format('opentype');
+}
+$my-font: 'Now';

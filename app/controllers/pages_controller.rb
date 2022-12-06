@@ -1,13 +1,4 @@
 class PagesController < ApplicationController
-  def home
-  end
-
-  def home_copywriting
-
-  end
-
-  # def about
-  # end
 
   def portfolio
 
@@ -23,6 +14,7 @@ class PagesController < ApplicationController
     {
       name: 'Landing Page',
       class_name: 'my-mode',
+      label: "Click here to visit my-mode.art",
       link: 'https://www.my-mode.art',
       image_link: 'my-mode-image.png',
       alt: "Image of My Mode landing page.",
@@ -32,7 +24,7 @@ class PagesController < ApplicationController
     {
       name: 'Email Newsletter',
       class_name: 'test',
-      alt: "Image of Medium page",
+      alt: "Image of email newsletter for short story socal network nuvell.",
       brief: 'An email newsletter designed to showcase short story platform nuvell.',
       image_link: 'email-newsletter1.png',
       description: " Email newsletters can really help you enhance customer retention. By providing them with regular and personalised updates, you can keep them engaged.\n\nBecause this is a site designed to share short stories, I wanted a newsletter that would provide readers with tips and tricks to help them improve their writing."
@@ -40,6 +32,8 @@ class PagesController < ApplicationController
     {
         name: 'Marketing Blog',
         class_name: 'blog',
+        label: "Click here to see my Medium post on marketing tips for 2023",
+        alt: 'Image of Medium page for blog post.',
         brief: 'A blog designed to help you improve your marketing strategies for 2023.',
         link: 'https://medium.com/p/9a76d7c19361/edit',
         image_link: 'blog-example.png',
@@ -48,6 +42,4 @@ class PagesController < ApplicationController
     ]
   end
 
-  def blog
-  end
 end

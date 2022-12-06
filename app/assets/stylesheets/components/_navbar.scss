@@ -1,15 +1,9 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
-}
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-}
 nav {
-  transition: top ease-out 1s;
+  transition: top ease-out 0.3s;
 }
+
+// .nav-link {
+//   transition: border-bottom 0.5s ease;
+// }
+

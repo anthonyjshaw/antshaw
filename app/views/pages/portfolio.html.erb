@@ -1,15 +1,15 @@
 <div class="flx-container">
   <div class="text-center my-5 mt-5">
     <div class="translate">
-      <h1 class="home-title">Portfolio</h1>
+      <h1 class="home-title">PORTFOLIO</h1>
       <div id="arrow-box" class="arrow-box">
         <%= image_tag 'arrow.svg', alt: "Graphic of directional arrow box.", aria_label: "Click to see the portfolio."%>
       </div>
     </div>
   </div>
 </div>
+<hr/>
 <div class="container-page">
-<hr>
 <div id="portfolio-examples" class="portfolio-examples">
   <% @examples.each do |ad| %>
   <div class="project-section">
@@ -17,7 +17,7 @@
     <div class="<%= @examples.index(ad) % 2 === 0 ? "example-row-reverse" : "example-row" %> project-example"> 
     <div class= "image-container <%= @examples.index(ad) % 2 === 0 ? "flex-end" : "flex-start"%>">
       <% if ad[:link] %>
-        <%= link_to ad[:link], rel: 'noopener', target: '_blank' do %>
+        <%= link_to ad[:link], alt: ad[:alt], rel: 'noopener', target: '_blank', aria_label: ad[:label] do %>
           <%= image_tag ad[:image_link], class: "project-image", alt: ad[:alt] %>
         <% end %>
         <% else %>
@@ -25,9 +25,9 @@
       <% end %>
     </div>
     <div class="description-container">
-      <h4>Brief</h4>
+      <h2 class="description-subheading">Brief</h2>
       <p><%= sanitize ad[:brief] %></p>
-      <h4>Description</h4>
+      <h2 class="description-subheading">Description</h2>
       <% if ad[:description].include? "\n\n" %>
         <% ad[:description].split("\n\n").each do |line| %>
           <p><%= sanitize line %></p>
