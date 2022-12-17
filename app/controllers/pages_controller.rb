@@ -23,23 +23,22 @@ class PagesController < ApplicationController
     },
     {
       name: 'Email Newsletter',
-      class_name: 'test',
+      class_name: 'newsletter',
       alt: "Image of email newsletter for short story socal network nuvell.",
       brief: 'An email newsletter designed to showcase short story platform nuvell.',
       image_link: 'email-newsletter1.png',
       description: " Email newsletters can really help you enhance customer retention. By providing them with regular and personalised updates, you can keep them engaged.\n\nBecause this is a site designed to share short stories, I wanted a newsletter that would provide readers with tips and tricks to help them improve their writing."
     },
     {
-        name: 'Marketing Blog',
-        class_name: 'blog',
-        label: "Click here to see my Medium post on marketing tips for 2023",
-        alt: 'Image of Medium page for blog post.',
-        brief: 'A blog designed to help you improve your marketing strategies for 2023.',
-        link: 'https://medium.com/p/9a76d7c19361/edit',
-        image_link: 'blog-example.png',
-        description: "Audiences <em>love</em> long form content, but they also need it to be digestible, especially if you're reading it on a screen. A blog is great way to communicate those ideas.\n\nBy providing marketers with a list of dos and dont's to remember for 2023, they'll be well equipped to handle whatever the new year throws at them."
+      name: 'Marketing Blog',
+      class_name: 'blog',
+      label: "Click here to see my Medium post on marketing tips for 2023",
+      alt: 'Image of Medium page for blog post.',
+      brief: 'A blog designed to help you improve your marketing strategies for 2023.',
+      link: 'https://medium.com/@three-marketers/advertising-in-2023-9a76d7c19361',
+      image_link: 'blog-example.png',
+      description: "Audiences <em>love</em> long form content, but they also need it to be digestible, especially if you're reading it on a screen. A blog is great way to communicate those ideas.\n\nBy providing marketers with a list of dos and dont's to remember for 2023, they'll be well equipped to handle whatever the new year throws at them."
     }
     ]
   end
-
 end
